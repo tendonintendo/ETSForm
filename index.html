@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Form</title>
+    <style>
+        body {
+            text-align: center;
+        }
+        form {
+            display: inline-block;
+            text-align: left;
+            margin-top: 20px;
+        }
+        input, textarea {
+            width: 300px;
+            padding: 10px;
+            font-size: 16px;
+        }
+        textarea {
+            height: 150px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Contact Form</h2>
+
+    <form id="contactForm">
+        <label for="name">Nama:</label><br>
+        <input type="text" id="name" name="name" required><br>
+        <span id="nameError" class="error"></span><br>
+
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" name="email" required><br>
+        <span id="emailError" class="error"></span><br>
+
+        <label for="phone">No. Telepon (Contoh: 081234567891):</label><br>
+        <input type="tel" id="phone" name="phone" pattern="^\d{10,13}$" required placeholder="Hanya menerima 10-13 digit"><br>
+        <span id="phoneError" class="error"></span><br>
+
+        <label for="message">Pesan:</label><br>
+        <textarea id="message" name="message" rows="4" required></textarea><br>
+        <span id="messageError" class="error"></span><br>
+
+        <button type="submit">Submit</button><br>
+    </form>
+
+    <script src="script.js"></script>
+</body>
+</html>
